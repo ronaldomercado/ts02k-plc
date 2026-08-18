@@ -10,5 +10,10 @@ SCRIPTS += ../stTS02K-CS-IOC-01.sh
 SCRIPTS += stTS02K-CS-IOC-01.boot
 PATH := $(PATH):/dls_sw/epics/R3.14.12.7/extensions/bin/linux-x86_64
 
+ifeq ($(EPICS_BASE),/epics/epics-base)
+stTS02K-CS-IOC-01.boot: ../stTS02K-CS-IOC-01.src
+	msi -MINSTALL=/epics/ts02k-plc $< > $@
+endif
+
 include $(TOP)/configure/RULES
 

@@ -5,11 +5,11 @@
 # 
 cd "$(INSTALL)"
 
-epicsEnvSet "EPICS_CA_REPEATER_PORT", '6065'
-epicsEnvSet "EPICS_CA_SERVER_PORT", '6064'
-epicsEnvSet "EPICS_CA_AUTO_ADDR_LIST", 'NO'
-epicsEnvSet "EPICS_CA_ADDR_LIST", '172.23.255.255'
-epicsEnvSet "EPICS_TS_MIN_WEST", '0'
+# epicsEnvSet "EPICS_CA_REPEATER_PORT", '6065'
+# epicsEnvSet "EPICS_CA_SERVER_PORT", '6064'
+# epicsEnvSet "EPICS_CA_AUTO_ADDR_LIST", 'NO'
+# epicsEnvSet "EPICS_CA_ADDR_LIST", '172.23.255.255'
+# epicsEnvSet "EPICS_TS_MIN_WEST", '0'
 
 
 # Loading libraries
@@ -23,12 +23,12 @@ cd "$(INSTALL)"
 dbLoadDatabase "dbd/TS02K-CS-IOC-01.dbd"
 TS02K_CS_IOC_01_registerRecordDeviceDriver(pdbbase)
 
-asSetFilename '/dls_sw/prod/R3.14.12.7/support/pvlogging/1-4/data/access.acf'
+asSetFilename '/epics/support/pvlogging/src/access.acf'
 
 # EtherIP Initialisation
 drvEtherIP_init()
 # Define EtherIP to PLC connection
-drvEtherIP_define_PLC("pport", "192.168.0.100", 0)
+drvEtherIP_define_PLC("pport", "192.168.116.100", 0)
 
 # Final ioc initialisation
 # ------------------------
