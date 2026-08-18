@@ -22,7 +22,7 @@ pattern { prefix }
 
 # Macros:
 #  IOC  Device prefix
-file $(IOCSTATS)/db/iocAdminSoft.db
+file $(DEVIOCSTATS)/db/iocAdminSoft.db
 {
 pattern { IOC }
     { "TS02K-CS-IOC-01" }
@@ -30,7 +30,7 @@ pattern { IOC }
 
 # Macros:
 #  IOC  Device prefix
-file $(IOCSTATS)/db/iocAdminScanMon.db
+file $(DEVIOCSTATS)/db/iocAdminScanMon.db
 {
 pattern { IOC }
     { "TS02K-CS-IOC-01" }

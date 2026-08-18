@@ -12,7 +12,6 @@ PVXS=/epics/support/pvxs
 # Additional Support Modules for individual IOCs will be added below this line
 CALC = /epics/support/calc
 DEVIOCSTATS = /epics/support/iocStats
-IOCSTATS = /epics/support/iocStats
 DLSPLC = /epics/support/dlsPLC
 ETHER_IP = /epics/support/ether_ip
 ASYN = /epics/support/asyn
