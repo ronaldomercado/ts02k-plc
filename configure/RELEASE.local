@@ -1,0 +1,27 @@
+# Global configure/RELEASE file for epics-containers IOCs
+
+SUPPORT=/epics/support
+-include $(TOP)/configure/SUPPORT.$(EPICS_HOST_ARCH)
+-include $(TOP)/configure/EPICS_BASE
+-include $(TOP)/configure/EPICS_BASE.$(EPICS_HOST_ARCH)
+
+# Paths to modules built in epics-base container
+EPICS_BASE=/epics/epics-base
+PVXS=/epics/support/pvxs
+
+# Additional Support Modules for individual IOCs will be added below this line
+SNCSEQ = /epics/support/sequencer
+IOCSTATS = /epics/support/iocStats
+SSCAN = /epics/support/sscan
+CALC = /epics/support/calc
+ASYN = /epics/support/asyn
+AUTOSAVE = /epics/support/autosave
+BUSY = /epics/support/busy
+PVLOGGING = /epics/support/pvlogging
+MOTOR = /epics/support/motor
+PMAC = /epics/support/pmac
+POSITIONER = /epics/support/positioner
+IDMOTION = /epics/support/idMotion
+IDPLC = /epics/support/idPLC
+DLSPLC = /epics/support/dlsPLC
+
