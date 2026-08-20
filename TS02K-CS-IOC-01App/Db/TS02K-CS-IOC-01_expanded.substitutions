@@ -9,7 +9,7 @@
 file $(IDPLC)/db/idplc_axisEna.template
 {
 pattern { prefix }
-    { "TS02K-MO-" }
+    { "TS16K-MO-" }
 }
 
 # Macros:
@@ -17,7 +17,7 @@ pattern { prefix }
 file $(IDPLC)/db/idplc_status.template
 {
 pattern { prefix }
-    { "TS02K-MO-" }
+    { "TS16K-MO-" }
 }
 
 # Macros:
@@ -25,7 +25,7 @@ pattern { prefix }
 file $(DEVIOCSTATS)/db/iocAdminSoft.db
 {
 pattern { IOC }
-    { "TS02K-CS-IOC-01" }
+    { "TS16K-CS-IOC-01" }
 }
 
 # Macros:
@@ -33,7 +33,7 @@ pattern { IOC }
 file $(DEVIOCSTATS)/db/iocAdminScanMon.db
 {
 pattern { IOC }
-    { "TS02K-CS-IOC-01" }
+    { "TS16K-CS-IOC-01" }
 }
 
 # # Macros:
@@ -43,7 +43,7 @@ pattern { IOC }
 # file $(DEVIOCSTATS)/db/iocGui.db
 # {
 # pattern { name, EDM_FILE, IOC }
-#     { "IOC.TS02K", "ioc_stats_softdls.edl", "TS02K-CS-IOC-01" }
+#     { "IOC.TS16K", "ioc_stats_softdls.edl", "TS16K-CS-IOC-01" }
 # }
 
 # Macros:
@@ -53,7 +53,7 @@ pattern { IOC }
 file $(ETHER_IP)/db/ether_ip_plcInfo.template
 {
 pattern { name, port, device }
-    { "PLC.INFO", "pport", "TS02K-MP-PLC-01" }
+    { "PLC.INFO", "pport", "TS16K-MP-PLC-01" }
 }
 
 # Macros:
@@ -63,7 +63,7 @@ pattern { name, port, device }
 file $(DLSPLC)/db/NX102_controller_status.template
 {
 pattern { device, port, name }
-    { "TS02K-MO-PLC-01:CS", "pport", "cont" }
+    { "TS16K-MO-PLC-01:CS", "pport", "cont" }
 }
 
 # Macros:
@@ -75,9 +75,9 @@ pattern { device, port, name }
 file $(DLSPLC)/db/NX102_digitalIn.template
 {
 pattern { device, port, tagidx, name, tag }
-    { "TS02K-MO-PLC-01:ST1", "pport", "1", "CPMU6.S1", "Digital_In_Epics" }
-    { "TS02K-MO-PLC-01:ST2", "pport", "2", "CPMU6.S2", "Digital_In_Epics" }
-    { "TS02K-MO-PLC-01:ST3", "pport", "3", "CPMU6.S3", "Digital_In_Epics" }
+    { "TS16K-MO-PLC-01:ST1", "pport", "1", "HPMUK16.S1", "Digital_In_Epics" }
+    { "TS16K-MO-PLC-01:ST2", "pport", "2", "HPMUK16.S2", "Digital_In_Epics" }
+    { "TS16K-MO-PLC-01:ST3", "pport", "3", "HPMUK16.S3", "Digital_In_Epics" }
 }
 
 # Macros:
@@ -92,10 +92,10 @@ pattern { device, port, tagidx, name, tag }
 file $(DLSPLC)/db/NX102_interlock.template
 {
 pattern { device, port, interlock, tag, tagidx, desc, name, auto_reset }
-    { "TS02K-MO-PLC-01:MAIN", "pport", "", "ILK", "2", "Motion Interlocks", "CPMU6.0MOT", "0" }
-    { "TS02K-MO-PLC-01:LIM", "pport", "", "ILK", "3", "Limit Interlocks", "CPMU6.1LIM", "0" }
-    { "TS02K-MO-TILT-01", "pport", "", "ILK", "1", "Tilt Interlocks", "CPMU6.2TILT", "0" }
-    { "TS02K-MO-PLC-01:SLIM", "pport", "", "ILK", "4", "Soft Limit Interlocks", "CPMU6.3SLIM", "0" }
+    { "TS16K-MO-PLC-01:MAIN", "pport", "", "ILK", "2", "Motion Interlocks", "HPMUK16.0MOT", "0" }
+    { "TS16K-MO-PLC-01:LIM", "pport", "", "ILK", "3", "Limit Interlocks", "HPMUK16.1LIM", "0" }
+    { "TS16K-MO-TILT-01", "pport", "", "ILK", "1", "Tilt Interlocks", "HPMUK16.2TILT", "0" }
+    { "TS16K-MO-PLC-01:SLIM", "pport", "", "ILK", "4", "Soft Limit Interlocks", "HPMUK16.3SLIM", "0" }
 }
 
 # Macros:
@@ -103,7 +103,7 @@ pattern { device, port, interlock, tag, tagidx, desc, name, auto_reset }
 file $(IDPLC)/db/NX102_idoverrides.template
 {
 pattern { prefix }
-    { "TS02K-MO" }
+    { "TS16K-MO" }
 }
 
 # Macros:
@@ -114,7 +114,7 @@ pattern { prefix }
 file $(IDPLC)/db/NX102_tilt.template
 {
 pattern { prefix, port, name, idname }
-    { "TS02K-MO", "pport", "CPMU6.TILT", "CPMU6" }
+    { "TS16K-MO", "pport", "HPMUK16.TILT", "HPMUK16" }
 }
 
 # Macros:
@@ -123,7 +123,7 @@ pattern { prefix, port, name, idname }
 file $(IDPLC)/db/NX102_axisexp.template
 {
 pattern { prefix, port }
-    { "TS02K-MO", "pport" }
+    { "TS16K-MO", "pport" }
 }
 
 # Macros:
@@ -132,7 +132,7 @@ pattern { prefix, port }
 file $(IDPLC)/db/NX102_tiltpot.template
 {
 pattern { prefix, port }
-    { "TS02K-MO", "pport" }
+    { "TS16K-MO", "pport" }
 }
 
 # Macros:
@@ -143,7 +143,7 @@ pattern { prefix, port }
 file $(IDPLC)/db/NX102_id.template
 {
 pattern { prefix, port, name, idname }
-    { "TS02K-MO", "pport", "CPMU6.TAGS", "" }
+    { "TS16K-MO", "pport", "HPMUK16.TAGS", "" }
 }
 
 # Macros:
@@ -154,8 +154,8 @@ pattern { prefix, port, name, idname }
 file $(IDPLC)/db/NX102_idpotscan.template
 {
 pattern { prefix, axx, port, name }
-    { "TS02K-MO", "1", "pport", "CPMU6.pot1" }
-    { "TS02K-MO", "2", "pport", "CPMU6.pot2" }
-    { "TS02K-MO", "3", "pport", "CPMU6.pot3" }
-    { "TS02K-MO", "4", "pport", "CPMU6.pot4" }
+    { "TS16K-MO", "1", "pport", "HPMUK16.pot1" }
+    { "TS16K-MO", "2", "pport", "HPMUK16.pot2" }
+    { "TS16K-MO", "3", "pport", "HPMUK16.pot3" }
+    { "TS16K-MO", "4", "pport", "HPMUK16.pot4" }
 }
