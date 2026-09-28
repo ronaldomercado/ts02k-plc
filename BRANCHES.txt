@@ -4,3 +4,7 @@ hpmu-k21 - k21 project ioc
 
 tags
 2026.08.21 (branch hpmu-k16)
+2026.09.28 (branch hpmu-k16)
+
+It is okay to merge from common to hpmu-k16 or kpmu-k21
+Don't merge the other way.
