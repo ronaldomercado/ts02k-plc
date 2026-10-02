@@ -1,6 +1,7 @@
 branches
 hpmu-k16 - ioc configured for k16 project
 hpmu-k21 - k21 project ioc
+hpmu-common - common to both
 
 tags - approximating RELEASE-NOTES
 2026.08.21 (branch hpmu-k16)
